@@ -9,6 +9,8 @@ struct golf
 };
 
 void setgolf(golf & g, const char * name, int hc);
+int setgolf(golf & g);
 void showgolf(const golf & g);
+void handicap(golf & g, int hc);
 
 #endif // GOLF_H

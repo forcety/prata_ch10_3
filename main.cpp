@@ -10,6 +10,15 @@ int main(int argc, char *argv[])
 
     golf ann;
     setgolf(ann, "Ann Birdfree", 24);
+    showgolf(ann);
 
+    golf andy;
+    int res = setgolf(andy);
+    std::cout << "res = " << res << "\n";
+    showgolf(andy);
+
+
+    std::cout << "Done.\n";
+    std::cin.get();
     return a.exec();
 }
