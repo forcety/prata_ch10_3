@@ -11,22 +11,27 @@ void setgolf(golf & g, const char * name, int hc)
 
 int setgolf(golf &g)
 {
+    char line[Len];
     std::cout << "Enter fullname: " ;
+    std::cin.get(line, Len);
+    std::cout << "Complete line:\n" << line << std::endl;
+    strcpy(g.fullname, line);
 
-    std::cin >> g.fullname;
+
     std::cout << "Enter handicap: " ;
     std::cin >> g.handicap;
 
-    /*
-    if(g.fullname == "")
+
+    if (line[0] == '\0')
     {
+        std::cout << "Empty name!\n" ;
         return 0;
     }
     else
     {
         return 1;
     }
-    */
+
 }
 
 void showgolf(const golf & g)

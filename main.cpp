@@ -19,6 +19,5 @@ int main(int argc, char *argv[])
 
 
     std::cout << "Done.\n";
-    std::cin.get();
     return a.exec();
 }
