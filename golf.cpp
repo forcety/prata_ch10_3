@@ -13,8 +13,12 @@ int setgolf(golf &g)
 {
     char line[Len];
     std::cout << "Enter fullname: " ;
-    std::cin.get(line, Len);
-    std::cout << "Complete line:\n" << line << std::endl;
+    // Метод sync нужен для сброса буфера ввода, если в буфер остались какие-либо данные
+    // после выполнения предыдущех операций взятия из потока, когда для текущей операции
+    // требуется получение данных именно с клавиатуры (в частности).
+    std::cin.sync();
+    std::cin.getline(line, Len);
+    std::cout << "Complete line: " << line << "\n";
     strcpy(g.fullname, line);
 
 
